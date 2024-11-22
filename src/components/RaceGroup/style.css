@@ -1,0 +1,14 @@
+.RaceGroup {
+  display: flex;
+  font-size: var(--app-font-size, 3vh);
+  color: white;
+}
+.RaceGroup .RaceHeader {
+  flex: 0 0 var(--app-height, 4.5vh);
+  z-index: 15;
+}
+.RaceGroup .players {
+  flex: 1 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}

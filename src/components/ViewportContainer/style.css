@@ -1,0 +1,22 @@
+:root {
+  --base-w: 3840;
+  --base-h: 2160;
+  --base-ratio: calc(var(--base-w) / var(--base-h));
+  --unit-panel-w: 1126;
+  --unit-panel-h: 518;
+  --minimap-panel-w: 658;
+  --minimap-panel-h: 698;
+}
+
+.ViewportContainer {
+  width: 100%;
+  height: 100%;
+}
+.BwObsLayout {
+  position: absolute;
+  bottom: 0;
+  min-height: 500px;
+  left: calc((658 / var(--base-h)) * 100vh);
+  width: calc(((var(--base-w) - var(--unit-panel-w) - var(--minimap-panel-w)) / var(--base-w)) * var(--base-ratio) * 100vh);
+  z-index: 12;
+}

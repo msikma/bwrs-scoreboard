@@ -1,0 +1,38 @@
+.RaceBackground {
+  /*--border-width: min(1px, calc(1vh / (2160 / 100)));*/
+  --border-width: calc(2.2vh / (2160 / 100));
+  --border-blur: calc(2vh / (2160 / 100));
+  position: relative;
+  overflow: hidden;
+}
+.RaceBackground .inner {
+  background: gray;
+}
+.RaceBackground .inner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(15deg, rgba(0,0,0,0) 0%, rgba(200,200,200,1) 100%);
+  mix-blend-mode: overlay;
+  box-shadow: inset var(--border-width) var(--border-width) var(--border-blur) rgba(0, 0, 0, 0.5), inset calc(var(--border-width) * -1) calc(var(--border-width) * -1) var(--border-blur) rgba(255, 255, 255, 0.5);
+}
+
+.RaceBackground.r-grayed-out .inner {
+  background-color: #3e3f42;
+  color: #95979b;
+}
+.RaceBackground.r-t .inner {
+  background-color: #4470d7;
+}
+.RaceBackground.r-p .inner {
+  background-color: #4d9f3f;
+}
+.RaceBackground.r-z .inner {
+  background-color: #cd2c2c;
+}
+.RaceBackground.r-unknown .inner {
+  background-color: #662d91;
+}
+.RaceBackground.r-r .inner {
+  background-color: #dabe00;
+}

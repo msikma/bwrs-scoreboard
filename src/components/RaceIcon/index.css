@@ -1,0 +1,25 @@
+
+.RaceIcon {
+  display: inline-block;
+  min-width: 1vh;
+  min-height: 1vh;
+  vertical-align: text-bottom;
+  background: transparent;
+  background-size: contain;
+  position: relative;
+}
+
+
+.RaceIcon.style-white .icon-inner {
+  filter: grayscale(1) brightness(1000) drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.3)) drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.2));
+}
+
+.RaceIcon .icon-inner {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+}
+
+.RaceIcon .icon-label {
+  display: none;
+}

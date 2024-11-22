@@ -1,0 +1,20 @@
+.RaceHeader {
+  --icon-size: var(--app-icon-size, 3.5vh);
+  width: var(--app-height, 4.5vh);
+  height: var(--app-height, 4.5vh);
+  line-height: var(--app-height, 4.5vh);
+  z-index: 500;
+}
+.RaceHeader .inner {
+  display: flex;
+  width: var(--app-height, 4.5vh);
+  height: var(--app-height, 4.5vh);
+  place-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.RaceHeader .inner .RaceIcon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+}

@@ -1,0 +1,17 @@
+.PlayerBar {
+  position: relative;
+  overflow: hidden;
+}
+.PlayerBar .player {
+  font-family: 'Roboto Condensed';
+  --shadow-width: min(1px, calc(122vh / (2160 / 100)));
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-height: var(--app-height, 4.5vh);
+  height: var(--app-height, 4.5vh);
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  padding-left: 0.4vh;
+  padding-right: 0.4vh;
+  text-align: center;
+}
