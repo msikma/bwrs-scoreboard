@@ -3,26 +3,20 @@
 
 import {useState} from 'react'
 import RaceGroup from '../RaceGroup'
+import ScoreboardBanner from '../ScoreboardBanner'
+import ScoreboardEditor from '../ScoreboardEditor'
 import './style.css'
 
-function SurvivorsScoreboard({config}) {
+function SurvivorsScoreboard({config, bannerState, playerState}) {
   const {players, misc} = config
   const races = ['t', 'p', 'z']
-
-  // Generate "isEliminated" state for all players by ID.
-  const allPlayers = [...Object.values(players)].flat()
-  const initialState = Object.fromEntries(allPlayers.map(player => player.id).map(id => [id, {isEliminated: false}]))
-  const [state, setState] = useState(initialState)
-
-  const eliminatePlayer = (id, eliminationState = true) => {
-    const newState = {...state}
-    newState[id].isEliminated = eliminationState
-    setState({...state, ...newState})
-  }
   
   return (
     <div className="SurvivorsScoreboard">
-      {races.map(race => <RaceGroup race={race} key={race} players={players[race]} playerState={state} callbacks={{eliminatePlayer}} />)}
+      <ScoreboardBanner bannerState={bannerState} />
+      <div className="race-groups">
+        {races.map(race => <RaceGroup race={race} key={race} players={players[race]} playerState={playerState.state} callbacks={playerState.callbacks} />)}
+      </div>
     </div>
   )
 }

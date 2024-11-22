@@ -2,12 +2,16 @@
   --app-font-size: 2.9vh;
   --app-height: 4.4vh;
   --app-icon-size: 3.3vh;
+  --app-banner-font-size: 2.3vh;
+  --app-banner-line-height: 3vh;
 
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 10;
+}
+.SurvivorsScoreboard .race-groups {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }

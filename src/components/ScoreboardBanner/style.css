@@ -1,0 +1,8 @@
+.ScoreboardBanner {
+  background: black;
+  color: white;
+  width: max-content;
+  padding: 0.2vh 1vh;
+  font-size: var(--app-banner-font-size, 2vh);
+  line-height: var(--app-banner-line-height, 3vh);
+}
