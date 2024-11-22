@@ -16,7 +16,6 @@ function SurvivorsScoreboard({config}) {
 
   const eliminatePlayer = (id, eliminationState = true) => {
     const newState = {...state}
-    console.log('ns', newState)
     newState[id].isEliminated = eliminationState
     setState({...state, ...newState})
   }
